@@ -36,3 +36,23 @@ export const updateTodoItem = (id) => {
         id
     }
 }
+export const getData = () => {
+    return {
+        type: types.FETCHING_DATA
+    }
+}
+
+export const getDataSuccess = (data) => {
+    return {
+        type: types.FETCHING_DATA_SUCCESS,
+        data
+    }
+}
+export const getDataFailure = () => {
+    return {
+        type : types.FETCHING_DATA_FAILURE
+    }
+}
+export const fetchData = () => {
+    
+}

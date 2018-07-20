@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
-import Appbar from './Appbar';
 import {store} from '../redux/store/store'
+import {connect} from 'react-redux'
 import AmountControl from './AmountControl';
 
 
 class Profile extends Component {
     constructor(props) {
         super(props);
+        console.log("profile props");
+        console.log(props);
         // console.log(store.getState());
     }
     render() {
@@ -24,16 +26,22 @@ class Profile extends Component {
                 </div>
                 <hr /> */}
                 <div>
-                    <div>Name : {this.props.name}</div>
-                    <div>Location : {this.props.location}</div>
+                    <div>Name : {this.props.profile.name}</div>
+                    <div>Location : {this.props.profile.location}</div>
                 </div>
                 <hr />
-                <AmountControl />
+                {/* <AmountControl /> */}
 
 
             </div>
         );
     }
 }
-
-export default Profile;
+function mapStateToProps(state) {
+  return {
+    profile: state.profile
+  }
+}
+export default connect(
+    mapStateToProps
+) (Profile);

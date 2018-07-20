@@ -104,3 +104,20 @@
      margin-left: 180px;
    }
  }
+ .container {
+  marginTop: 100
+}
+.text {
+  textAlign: 'center'
+}
+.button {
+  display: 'flex';
+  minHeight: 60;
+  margin: 10;
+  justifyContent: 'center';
+  alignItems: 'center';
+  backgroundColor: '#0b7eff'
+}
+.buttonText {
+  color: 'white'
+}

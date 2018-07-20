@@ -25,7 +25,7 @@ const todoListDefault = [{
     name: "tuannmg",
     date: "30-11-95",
     isCompleted: false
-  }]
+  }];
 export default function todos (state = todoListDefault, action) {
     switch (action.type) {
         case types.REMOVE_TODO_ITEM:
