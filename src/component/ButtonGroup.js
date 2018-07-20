@@ -9,7 +9,7 @@ class ButtonGroup extends Component {
     }
     dispatchBtnAction(event){
         const tech = event.target.dataset.tech;
-        console.log(tech);
+        // console.log(tech);
         store.dispatch(setTechnology(tech))
     }
     render() {
